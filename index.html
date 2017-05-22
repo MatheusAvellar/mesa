@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="lt-ie9"> <![endif]-->
+<html lang="en">
+<head>
+    <!-- UTF8 -->
+    <meta charset="utf-8"/>
+    <!-- [SEO] No translate, no custom search -->
+    <meta name="google" content="nositelinkssearchbox"/>
+    <meta name="google" content="notranslate"/>
+    <!-- Required webpage title -->
+    <title>Mesa - Card game</title>
+    <!-- [SEO] Metadata -->
+    <meta name="author" content="Matheus Avellar"/>
+    <meta name="description" content="Versão web do popular jogo de cartas, 17.5."/>
+    <!-- Obligatory viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Disable automatic phone number detection (iOS8) -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- Activate ClearType on Mobile IE for smoother fonts -->
+    <meta http-equiv="cleartype" content="on"/>
+    <!-- Mobile color theme -->
+    <meta name="theme-color" content="#eeeeee"/>
+    <meta name="msapplication-navbutton-color" content="#eeeeee"/>
+    <!-- Allow web app to be run in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- Configure the status bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Mesa - Card game"/>
+    <meta property="og:image" content="dird.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Versão web do popular jogo de cartas, 17.5."/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="https://avellar.ml"/>
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@thatavellar"/>
+    <meta property="twitter:title" content="Mesa - Card game"/>
+    <meta property="twitter:description" content="Versão web do popular jogo de cartas, 17.5."/>
+    <meta property="twitter:image" content="https://www.avellar.ml/dird.jpg"/>
+    <!-- iPhone 6 Plus -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.avellar.ml/ico/apple-touch-icon-180x180.png"/>
+    <!-- iPad retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.avellar.ml/ico/apple-touch-icon-152x152.png"/>
+    <!-- iPad retina (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.avellar.ml/ico/apple-touch-icon-144x144.png"/>
+    <!-- iPhone retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.avellar.ml/ico/apple-touch-icon-120x120.png"/>
+    <!-- iPhone retina touch icon (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.avellar.ml/ico/apple-touch-icon-114x114.png"/>
+    <!-- iPad touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"   href="https://www.avellar.ml/ico/apple-touch-icon-76x76.png"/>
+    <!-- iPad touch icon (non-retina / iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="https://www.avellar.ml/ico/apple-touch-icon-72x72.png"/>
+    <!-- iPhone touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"   href="https://www.avellar.ml/ico/apple-touch-icon-60x60.png"/>
+    <!-- Standard iOS home screen (iPod Touch, iPhone first generation to 3G -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="https://www.avellar.ml/ico/apple-touch-icon-57x57.png"/>
+    <!-- Android Chrome (M31+) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-196x196.png" sizes="196x196"/>
+    <!-- Android material standarization of 48px units -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-192x192.png" sizes="192x192"/>
+    <!-- GoogleTV icon -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-96x96.png"   sizes="96x96"/>
+    <!-- New tab page in IE; Taskbar button in Windows 7+; Safari Reading List sidebar -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-32x32.png"   sizes="32x32"/>
+    <!-- Standard for most browsers -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-16x16.png"   sizes="16x16"/>
+    <!-- Chrome Web store app icon; Android icon (low-res) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-128.png"     sizes="128x128"/>
+    <!-- Android default name for pinned website -->
+    <meta name="application-name" content="Mesa"/>
+    <!-- IE10 Metro tile for pinned website -->
+    <meta name="msapplication-tooltip" content="avellar.ml"/>
+    <meta name="msapplication-config" content="https://www.avellar.ml/ico/ieconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#eeeeee"/>
+    <meta name="msapplication-TileImage" content="https://www.avellar.ml/ico/mstile-144x144.png"/>
+    <!-- Windows 8.1 Metro tile image (small) -->
+    <meta name="msapplication-square70x70logo"   content="https://www.avellar.ml/ico/mstile-70x70.png"/>
+    <!-- Windows 8.1 Metro tile image (square) -->
+    <meta name="msapplication-square150x150logo" content="https://www.avellar.ml/ico/mstile-150x150.png"/>
+    <!-- Windows 8.1 Metro tile image (wide) -->
+    <meta name="msapplication-wide310x150logo"   content="https://www.avellar.ml/ico/mstile-310x150.png"/>
+    <!-- Windows 8.1 Metro tile image (large) -->
+    <meta name="msapplication-square310x310logo" content="https://www.avellar.ml/ico/mstile-310x310.png"/>
+    <style type="text/css">
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            outline: 0;
+            list-style: none;
+            font-weight: normal;
+            text-decoration: none;
+            vertical-align: middle;
+            box-sizing: border-box;
+            background: transparent;
+            -webkit-text-decoration-skip: ink;
+            -webkit-transform-origin: 50%  51%;
+            -webkit-backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            -webkit-transform-style: preserve-3d;
+        }
+        html,body {
+            height: 100%;
+            min-height: 100%;
+            width: 100%;
+            min-width: 100%;
+        }
+        html {
+            color: #fff;
+            background-color: #004000;
+            text-align: center;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            cursor: default;
+            font-family: serif; /* TODO: add a font */
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            border: 2px solid #d6d3ce;
+            background-color: #008000;
+            box-sizing: content-box;
+        }
+        #player {
+            position: absolute;
+            width: 100%;
+            height: 30%;
+            bottom: 0;
+        }
+        #table, #hand {
+            position: relative;
+            height: 100%;
+            width: calc(50% - 2px);
+            display: inline-block;
+        }
+        #hand {
+            background-color: #060;
+        }
+        #table .card, #hand .card {
+            margin-top: 18px;
+        }
+        #table::before, #hand::before {
+            content: "Mesa";
+            position: absolute;
+            margin: 10px;
+            left: 0;
+            top: 0;
+            vertical-align: top;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        #hand::before {
+            content: "Mão";
+        }
+        #deck {
+            position: absolute;
+            text-align: center;
+            bottom: 30%;
+            height: 45%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #deck .card {
+            margin-top: 9px;
+        }
+        .card {
+            display: inline-block;
+            background-image: url(/resources/deck.png);
+            width: 71px;
+            height: 96px;
+            margin: 0 5px;
+            transition: transform .075s ease, box-shadow .075s ease;
+        }
+        .card.selected {
+            transform: translateX(-3px) translateY(-4px);
+            box-shadow: 4px 3px 0 0 #005900;
+        }
+        .card.deck {
+            position: relative;
+            background-position: calc(71px * -4) 0;
+        }
+        .card.deck::before, .card.deck::after {
+            content: "";
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            position: absolute;
+            height: 96px;
+            width: 71px;
+            transform: translateY(-3px);
+            background-position: calc(71px * -4) 0;
+            background-image: url(/resources/deck.png);
+        }
+        .card.deck::after {
+            -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+        }
+        .card.locked {
+            -webkit-transform: rotate(90deg) scale(1.01);
+            transform: rotate(90deg) scale(1.01);
+        }
+        #oponents {
+            height: 25%;
+        }
+        .oponent {
+            display: inline-block;
+            margin: 5px 20px;
+            transition: all .2s ease;
+        }
+        .oponent:first-of-type {  margin-left: 0;  }
+        .oponent:last-of-type {  margin-right: 0;  }
+
+        .oponent.playing {
+            transform: translateY(20px);
+        }
+        #turn {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+        }
+
+        .card[data-card=""]:not(.deck),
+        .card:not([data-card]):not(.deck),
+        .card.empty {
+            background-position: calc(71px * -4) calc(96px * -12);
+        }
+
+        .card[data-card$="S"] {  background-position-x: 0px;  }
+        .card[data-card$="C"] {  background-position-x: -71px;  }
+        .card[data-card$="H"] {  background-position-x: calc(71px * -2);  }
+        .card[data-card$="D"] {  background-position-x: calc(71px * -3);  }
+
+        /* TODO: add Jokers to the image */
+        .card[data-card$="0"] {  /*background-position-x: calc(71px * -3);*/  }
+        .card[data-card$="1"] {  /*background-position-x: calc(71px * -3);*/  }
+        .card[data-card^="0"] {  background-position: calc(71px * -4) calc(96px * -12);  }
+
+        .card[data-card^="K"] {  background-position-y: 0px;  }
+        .card[data-card^="Q"] {  background-position-y: -96px;  }
+        .card[data-card^="J"] {  background-position-y: calc(96px * -2);  }
+        .card[data-card^="A"] {  background-position-y: calc(96px * -3);  }
+        .card[data-card^="2"] {  background-position-y: calc(96px * -4);  }
+        .card[data-card^="3"] {  background-position-y: calc(96px * -5);  }
+        .card[data-card^="4"] {  background-position-y: calc(96px * -6);  }
+        .card[data-card^="5"] {  background-position-y: calc(96px * -7);  }
+        .card[data-card^="6"] {  background-position-y: calc(96px * -8);  }
+        .card[data-card^="7"] {  background-position-y: calc(96px * -9);  }
+        .card[data-card^="8"] {  background-position-y: calc(96px * -10);  }
+        .card[data-card^="9"] {  background-position-y: calc(96px * -11);  }
+        .card[data-card^="X"] {  background-position-y: calc(96px * -12);  }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="oponents">
+            <div class="oponent">
+                <figure class="card"></figure>
+                <figure class="card"></figure>
+            </div>
+            <div class="oponent">
+                <figure class="card"></figure>
+                <figure class="card"></figure>
+            </div>
+            <div class="oponent">
+                <figure class="card"></figure>
+                <figure class="card"></figure>
+            </div>
+        </section>
+        <section id="deck">
+            <figure class="card deck"></figure>
+            <figure id="discard" class="card empty"></figure>
+        </section>
+        <section id="player">
+            <div id="table">
+                <figure class="card"></figure>
+                <figure class="card"></figure>
+            </div>
+            <div id="hand">
+                <figure class="card"></figure>
+                <figure class="card"></figure>
+            </div>
+        </section>
+        <section id="turn">É a sua vez</section>
+    </main>
+    <script type="text/javascript">
+        let mesa = {
+            _version: "Alpha 0.1.1",
+            _names: [
+                /* TODO: change player names and stuff */
+                "player0", "player0", "player0", "player0"
+            ],
+            cards: {
+                _full_deck: [
+                    "AC", "AD", "AH", "AS",
+                    "2C", "2D", "2H", "2S",
+                    "3C", "3D", "3H", "3S",
+                    "4C", "4D", "4H", "4S",
+                    "5C", "5D", "5H", "5S",
+                    "6C", "6D", "6H", "6S",
+                    "7C", "7D", "7H", "7S",
+                    "8C", "8D", "8H", "8S",
+                    "9C", "9D", "9H", "9S",
+                    "XC", "XD", "XH", "XS",
+                    "JC", "JD", "JH", "JS",
+                    "QC", "QD", "QH", "QS",
+                    "KC", "KD", "KH", "KS",
+                    "00", "01"
+                ],
+                deck: [],
+                dead: [],
+                players: [
+                    {
+                        name: "player0",
+                        hand: [],
+                        table: [],
+                        el_hand: [],
+                        el_table: []
+                    },
+                    {
+                        name: "Avellar",
+                        hand: [],
+                        table: [],
+                        el_table: []
+                    },
+                    {
+                        name: "Breno",
+                        hand: [], table: [],
+                        el_table: []  },
+                    {
+                        name: "Coll",
+                        hand: [], table: [],
+                        el_table: []
+                    }
+                ],
+                shuffle: function(array) {
+                    // Array shuffle, brought to you by Stack Overflow <3
+                    // Apparently, this is O(n) and super efficient and awesome
+                    let m = array.length, t, i;
+                    while(m) {
+                        i = ~~(Math.random() * m--);
+                        t = array[m];
+                        array[m] = array[i];
+                        array[i] = t;
+                    }
+                    return array;
+                },
+                distribute: function(deck, _players) {
+                    // Gives 4 cards to each player
+                    let players = _players.slice(0);
+                    let s = ["hand", "table"],
+                        l = players.length;
+                    for(let i = 0; i < l; i++) {
+                        for(let j = 0; j < 2; j++) {
+                            for(let k = 0; k < 2; k++) {
+                                let c = deck.shift();
+                                players[i][s[j]][k] = c;
+                                if(!i&&!j)players[0].el_hand[k].dataset.card = c;
+                                if(j)players[i].el_table[k].dataset.card = c;
+                            }
+                        }
+                    }
+                    return players;
+                },
+                select: function(e) {
+                    // Event run when a card is selected
+                    if(e.isTrusted && mesa.gamestate == "game") {
+                        if(mesa.turn === "player0" && mesa.action.length < 2) {
+                            mesa.action.push(e.target);
+                            e.target.className += " selected";
+                        } else {
+                            console.log("It's " + mesa.turn + "'s turn or 2 cards are already selected");
+                        }
+                    } else {
+                        console.log("Game not running or event is not trusted");
+                    }
+                    if(mesa.action.length === 2 && mesa.gamestate == "game") {
+                        mesa.action.push("end");
+                        mesa.handle_action();
+                    }
+                },
+                get_card: function(array) {
+                    // Get random card from given deck
+                    if(!array.length) {
+                        /* TODO: handle this crap */
+                        throw "Deck is out of cards!";
+                        return null;
+                    } else {
+                        let index = ~~(Math.random()*array.length);
+                        let card = array.splice(index, 1)[0];
+                        console.log(array);
+                        return card;
+                    }
+                },
+                get_value: function(card) {
+                    /* TODO: revise this, there might be a nicer way to do it */
+                    if(card.length === 2) {
+                        let _c = card[0];
+                        if(_c == "A") return 1;
+                        else if(_c == "2") return 2;
+                        else if(_c == "3") return 3;
+                        else if(_c == "4") return 4;
+                        else if(_c == "5") return 5;
+                        else if(_c == "6") return 6;
+                        else if(_c == "7") return 7;
+                        else if(_c == "8") return 8;
+                        else if(_c == "9") return 9;
+                        else if(_c == "X"
+                             || _c == "J"
+                             || _c == "Q"
+                             || _c == "K") return 10;
+                        else if(_c == "0") return 0.5;
+                    }
+                    return 0;
+                }
+            },
+            update_turns: function(time) {
+                // Cycle through name array
+                let _t = setTimeout(function update() {
+                    mesa.deselect(0);
+                    let _i = mesa._names.indexOf(mesa.turn);
+                    if(_i === -1) {
+                        mesa.turn = "player0";
+                    } else {
+                        mesa.turn = _i+1 >= mesa._names.length
+                                ? mesa._names[0]
+                                : mesa._names[_i+1];
+                    }
+                    mesa.el.turn_element.innerText = "É a " + ((mesa.turn=="player0")
+                                                    ? "sua vez"
+                                                    : "vez de " + mesa.turn);
+                }, time);
+            },
+            deselect: function(time) {
+                // Remove "select" class from cards and clear action queue
+                let _t = setTimeout(function update() {
+                    mesa.action[0].className = mesa.action[0].className.split(" selected").join("");
+                    mesa.action[1].className = mesa.action[1].className.split(" selected").join("");
+                    mesa.action = [];
+                }, time);
+            },
+            handle_action: function() {
+                // Find out what to do with selected cards
+
+                let action = mesa.action;
+                if(action.length !== 2) return;
+
+                console.log("\nCards:");
+                console.log(action);
+
+                if(action[0] == action[1]) {
+                    console.log("Same card, locking / unlocking");
+                    action[0].className = action[0].className.indexOf("locked") < 0
+                        ? action[0].className + " locked"
+                        : action[0].className.split(" locked").join("");
+                    return mesa.update_turns(mesa.wait);
+                }
+
+                if(action[0].parentElement == action[1].parentElement) {
+                    console.log("Same parent, no swap");
+                    return mesa.deselect(mesa.wait);
+                }
+
+
+                /* Oh dear god 
+                 * TODO: CLEAN UP THIS MESS
+                 */
+                if(action[0].parentElement.id == "table"
+                && action[1].parentElement.id == "hand") {
+                    mesa.el.discard.className = mesa.el.discard.className.split(" empty").join("");
+                    mesa.el.discard.dataset.card = action[0].dataset.card;
+                    mesa.cards.dead.push(action[0].dataset.card);
+                    console.log(mesa.cards.get_value(action[0].dataset.card),
+                                mesa.cards.get_value(action[1].dataset.card));
+                    if(mesa.cards.get_value(action[0].dataset.card) == mesa.cards.get_value(action[1].dataset.card)) {
+                        console.log("Same value, no move spent");
+                        mesa.deselect(500);
+                    } else {
+                        mesa.update_turns(mesa.wait);
+                    }
+                    action[0].dataset.card = action[1].dataset.card;
+                    action[1].dataset.card = mesa.cards.get_card(mesa.cards.deck);
+                    return mesa.deselect(mesa.wait);
+                } else if(action[0].parentElement.id == "hand"
+                && action[1].parentElement.id == "table") {
+                    mesa.el.discard.className = mesa.el.discard.className.split(" empty").join("");
+                    mesa.el.discard.dataset.card = action[1].dataset.card;
+                    mesa.cards.dead.push(action[1].dataset.card);
+                    console.log(mesa.cards.get_value(action[0].dataset.card),
+                                mesa.cards.get_value(action[1].dataset.card));
+                    if(mesa.cards.get_value(action[0].dataset.card) == mesa.cards.get_value(action[1].dataset.card)) {
+                        console.log("Same value, no move spent");
+                        mesa.deselect(mesa.wait);
+                    } else {
+                        mesa.update_turns(mesa.wait);
+                    }
+                    action[1].dataset.card = action[0].dataset.card;
+                    action[0].dataset.card = mesa.cards.get_card(mesa.cards.deck);
+                } else {
+                    let _c = action[0].dataset.card;
+                    action[0].dataset.card = action[1].dataset.card;
+                    action[1].dataset.card = _c;
+                    mesa.update_turns(mesa.wait);
+                }
+                /* </oh-dear-god>
+                 * </clean-up>
+                 */
+            },
+            // Default delay between actions and such
+            wait: 500,
+            // Current game state (only "", "game" exist so far)
+            gamestate: "",
+            // Current turn
+            turn: "player0",
+            el: {
+                turn_element: null,
+                discard: null
+            },
+            // List of cards to swap (must be length 2)
+            action: [],
+            set_triggers: function() {
+                // Set click events for each card
+                let _card_nodes = document.querySelectorAll(".card:not(.deck):not(.empty)");
+                for(let i = 0, l = _card_nodes.length; i < l; i++) {
+                    _card_nodes[i].onclick = mesa.cards.select;
+                }
+            },
+            init: function() {
+                // Get oponent card elements (table cards)
+                let _oponent_nodes = document.querySelectorAll("#oponents .oponent");
+                for(let i = 0, l = _oponent_nodes.length; i < l; i++) {
+                    mesa.cards.players[i+1].el_table = _oponent_nodes[i].children;
+                }
+
+                // Get player card elements (hand and table cards)
+                mesa.cards.players[0].el_hand = document.querySelectorAll("#hand")[0].children;
+                mesa.cards.players[0].el_table = document.querySelectorAll("#table")[0].children;
+
+                // Get turn element
+                mesa.el.turn_element = document.getElementById("turn");
+
+                // Get the discard deck element
+                mesa.el.discard = document.getElementById("discard");
+
+                // Set click events for each card
+                mesa.set_triggers();
+
+                mesa.start();
+            },
+            start: function() {
+                // Clone _full_deck into deck
+                mesa.cards.deck = JSON.parse(JSON.stringify(mesa.cards._full_deck));
+
+                // Shuffle current deck
+                mesa.cards.deck = mesa.cards.shuffle(mesa.cards.deck);
+
+                // Give out cards
+                mesa.cards.players = mesa.cards.distribute(mesa.cards.deck, mesa.cards.players);
+
+                // Update game state
+                mesa.gamestate = "game";
+            }
+        };
+        // Hook the load event to init function
+        document.body.onload = mesa.init;
+    </script>
+</body>
+</html>
